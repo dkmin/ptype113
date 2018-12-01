@@ -1,0 +1,141 @@
+<template name="Form2Insert">
+	<div class="page-container container" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+			</div>
+		</div>
+		{{> Form2InsertInsertForm}}
+	</div>
+</template>
+
+<template name="Form2InsertInsertForm">
+	<div id="form2insert-insert-form" class="">
+		<h2 id="component-title">
+			New invoice
+		</h2>
+		<form role="form">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}
+
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<div class="form-group  field-systemname">
+				<label for="systemname">
+					체계명
+				</label>
+				<div class="input-div">
+					<input type="text" name="systemname" value="" class="form-control " autofocus="autofocus" required="required">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-systemnote">
+				<label for="systemnote">
+					체계설명
+				</label>
+				<div class="input-div">
+					<input type="text" name="systemnote" value="" class="form-control ">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-systemtype">
+				<label for="systemtype">
+					체계유형
+				</label>
+				<div class="input-div">
+					<input type="text" name="systemtype" value="" class="form-control ">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-info3">
+				<label for="info3">
+					정보중요도
+				</label>
+				<div class="input-div">
+					<input type="text" name="info3" value="[ ]비밀  [ ]중요  [ ]일반" class="form-control ">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-system3">
+				<label for="system3">
+					체계중요도
+				</label>
+				<div class="input-div">
+					<input type="text" name="system3" value="[ ]가급  [ ]나급 [ ]다급" class="form-control ">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-evaluator">
+				<label for="evaluator">
+					평가자
+				</label>
+				<div class="input-div">
+					<input type="text" name="evaluator" value="" class="form-control ">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-years">
+				<label for="years">
+					평가년도
+				</label>
+				<div class="input-div">
+					<input type="text" name="years" value="" class="form-control ">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-customer-id">
+				<label for="customerId">
+					평가항목명
+				</label>
+				<div class="input-div">
+					<select class="form-control " name="customerId" required="required">
+						{{#each customer_list}}
+						<option value="{{_id}}">							{{name}}</option>
+						{{/each}}
+					</select>
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="submit-div">
+					<a href="#" id="form-cancel-button" class="btn btn-default">
+						Cancel
+					</a>
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						Save
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+
