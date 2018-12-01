@@ -1,0 +1,132 @@
+<template name="Form2Details">
+	<div class="page-container container">
+		<div class="row">
+			<div class="col-md-12" id="content">
+				<div class="row" id="title_row">
+					<div class="col-md-12">
+					</div>
+				</div>
+				{{> Form2DetailsDetailsForm}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12" id="menu">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12" id="subcontent">
+				{{> yield region='Form2DetailsSubcontent'}}
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="Form2DetailsDetailsForm">
+	<div id="form2details-details-form" class="">
+		<h2 id="component-title">
+			<a href="#" id="form-back-button" class="btn btn-default" title="back">
+				<span class="fa fa-chevron-left">
+				</span>
+			</a>
+			Invoice details
+		</h2>
+		<form role="form" class="form-horizontal">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}
+
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<div class="form-group  field-systemname">
+				<label for="systemname" class="col-sm-3 control-label">
+					체계명
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static  control-field-systemname">
+						{{invoice_details.systemname}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-systemnote">
+				<label for="systemnote" class="col-sm-3 control-label">
+					체계설명
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static  control-field-systemnote">
+						{{invoice_details.systemnote}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-systemtype">
+				<label for="systemtype" class="col-sm-3 control-label">
+					체계유형
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static  control-field-systemtype">
+						{{invoice_details.systemtype}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-info3">
+				<label for="info3" class="col-sm-3 control-label">
+					정보중요도
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static  control-field-info3">
+						{{invoice_details.info3}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-system3">
+				<label for="system3" class="col-sm-3 control-label">
+					체계중요도
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static  control-field-system3">
+						{{invoice_details.system3}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-evaluator">
+				<label for="evaluator" class="col-sm-3 control-label">
+					평가자
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static  control-field-evaluator">
+						{{invoice_details.evaluator}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-years">
+				<label for="years" class="col-sm-3 control-label">
+					평가년도
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static  control-field-years">
+						{{invoice_details.years}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-customer-name">
+				<label for="customer.name" class="col-sm-3 control-label">
+					평가항목명
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static  control-field-customer-name">
+						{{invoice_details.customer.name}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="submit-div col-sm-9 col-sm-offset-3">
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+
