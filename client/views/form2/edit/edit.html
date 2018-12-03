@@ -11,7 +11,7 @@
 <template name="Form2EditEditForm">
 	<div id="form2edit-edit-form" class="">
 		<h2 id="component-title">
-			Edit invoice
+			체계정보 편집
 		</h2>
 		<form role="form">
 			{{#if errorMessage}}
@@ -42,7 +42,7 @@
 					체계설명
 				</label>
 				<div class="input-div">
-					<input type="text" name="systemnote" value="{{invoice_details.systemnote}}" class="form-control ">
+					<textarea class="form-control " name="systemnote">{{invoice_details.systemnote}}</textarea>
 					<span id="help-text" class="help-block">
 					</span>
 					<span id="error-text" class="help-block">

@@ -16,6 +16,7 @@ Router.publicRoutes = [
 
 Router.privateRoutes = [
 	"home_private",
+	"form3",
 	"form1",
 	"form1.insert",
 	"form1.details",
@@ -84,6 +85,7 @@ Router.map(function () {
 	this.route("/forgot_password", {name: "forgot_password", title: "", controller: "ForgotPasswordController"});
 	this.route("/reset_password/:resetPasswordToken", {name: "reset_password", title: "", controller: "ResetPasswordController"});
 	this.route("/home_private", {name: "home_private", title: "Welcome {{userFullName}}!", controller: "HomePrivateController"});
+	this.route("/form3", {name: "form3", title: "준비중입니다!", controller: "Form3Controller"});
 	this.route("/form1", {name: "form1", title: "", controller: "Form1Controller"});
 	this.route("/form1/insert", {name: "form1.insert", title: "", controller: "Form1InsertController"});
 	this.route("/form1/details/:customerId", {name: "form1.details", title: "", controller: "Form1DetailsController"});
